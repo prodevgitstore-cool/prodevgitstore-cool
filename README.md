@@ -85,22 +85,22 @@ I work in existing codebases: tracing production issues, fixing bugs, and implem
 
 <div align="center">
 
-The first card is activity and repository totals. The second card is languages detected in public repositories. Both are generated from this GitHub account. The first workflow run replaces the placeholder images.
+The first card is activity and repository totals. The second card is languages detected in public repositories. Both are generated from this GitHub account.
 
 <table>
 <tr>
 <td align="center" width="50%">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg" />
-  <img alt="GitHub statistics for this account" src="./profile/stats-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/stats-dark.svg?v=2" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile/stats-light.svg?v=2" />
+  <img alt="GitHub statistics for this account" src="./profile/stats-light.svg?v=2" />
 </picture>
 </td>
 <td align="center" width="50%">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile/top-langs-light.svg" />
-  <img alt="Most used languages on this account" src="./profile/top-langs-light.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/top-langs-dark.svg?v=2" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile/top-langs-light.svg?v=2" />
+  <img alt="Most used languages on this account" src="./profile/top-langs-light.svg?v=2" />
 </picture>
 </td>
 </tr>
@@ -112,12 +112,12 @@ The first card is activity and repository totals. The second card is languages d
 
 <div align="center">
 
-A 3D view of the last year of GitHub contributions. After the workflow runs, the light graph is an animated calendar and the dark graph uses the night-green view.
+A 3D view of the last year of GitHub contributions. The light graph is an animated calendar and the dark graph uses the night-green view.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
-  <img alt="3D GitHub contribution graph" src="./profile-3d-contrib/profile-green-animate.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg?v=2" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg?v=2" />
+  <img alt="3D GitHub contribution graph" src="./profile-3d-contrib/profile-green-animate.svg?v=2" width="100%" />
 </picture>
 
 </div>

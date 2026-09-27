@@ -70,12 +70,12 @@ The first card is activity and repository totals. The second card is languages d
 
 <div align="center">
 
-A 3D view of the last year of GitHub contributions. The light graph is an animated calendar and the dark graph uses the night-green view.
+A 3D view of the last year of GitHub contributions. The blocks rise and fall continuously, and the language ring keeps redrawing.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg?v=2" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg?v=2" />
-  <img alt="3D GitHub contribution graph" src="./profile-3d-contrib/profile-green-animate.svg?v=2" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg?v=4" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg?v=4" />
+  <img alt="3D GitHub contribution graph with blocks that rise and fall" src="./profile-3d-contrib/profile-green-animate.svg?v=4" width="100%" />
 </picture>
 
 </div>

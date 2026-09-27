@@ -65,6 +65,11 @@ jobs:
           # GITHUB_TOKEN: ${{ secrets.PROFILE_STATS_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
+      # The generator plays each bar once. This keeps the bars looping
+      # up and down after every daily rebuild.
+      - name: Loop contribution motion
+        run: python3 scripts/loop_contribution_motion.py
+
       - name: Commit contribution graph
         run: |
           git config user.name "github-actions[bot]"

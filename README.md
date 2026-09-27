@@ -4,17 +4,19 @@
   EDIT_CURRENT_FOCUS
     Rewrite the Current focus bullets so they match work you want to highlight.
 
-  Header artwork:
+  Header and technology artwork:
     profile/hero-light.svg
     profile/hero-dark.svg
+    profile/tech-light.svg
+    profile/tech-dark.svg
 -->
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile/hero-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile/hero-light.svg" />
-  <img alt="Python / Django developer and full-stack developer. Production web applications, APIs, and backend systems." src="./profile/hero-light.svg" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/hero-dark.svg?v=3" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile/hero-light.svg?v=3" />
+  <img alt="Python / Django developer and full-stack developer. Production web applications, APIs, and backend systems." src="./profile/hero-light.svg?v=3" width="100%" />
 </picture>
 
 </div>
@@ -29,31 +31,11 @@ I work in existing codebases: tracing production issues, fixing bugs, and implem
 
 <div align="center">
 
-**Backend**
-
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&amp;logo=python&amp;logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=flat&amp;logo=django&amp;logoColor=white" alt="Django" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&amp;logo=nodedotjs&amp;logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/REST%20APIs-334155?style=flat" alt="REST APIs" />
-</p>
-
-**Frontend**
-
-<p>
-  <img src="https://img.shields.io/badge/React-20232A?style=flat&amp;logo=react&amp;logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&amp;logo=javascript&amp;logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" />
-</p>
-
-**Data and delivery**
-
-<p>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&amp;logo=postgresql&amp;logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&amp;logo=amazonaws&amp;logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat&amp;logo=git&amp;logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&amp;logo=github&amp;logoColor=white" alt="GitHub" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile/tech-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile/tech-light.svg" />
+  <img alt="Technology stack: Python, Django, Node.js, REST APIs, React, JavaScript, TypeScript, PostgreSQL, AWS, Git, and GitHub." src="./profile/tech-light.svg" width="100%" />
+</picture>
 
 </div>
 

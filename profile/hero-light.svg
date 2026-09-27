@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="168" viewBox="0 0 960 168" role="img" aria-label="Python and Django developer, full-stack developer">
+  <rect width="960" height="168" rx="12" fill="#f8fafc"/>
+  <rect width="960" height="4" fill="#0f766e"/>
+  <rect x="1" y="1" width="958" height="166" rx="12" fill="none" stroke="#e2e8f0"/>
+  <text x="480" y="62" text-anchor="middle" fill="#0f766e" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2">PYTHON / DJANGO</text>
+  <text x="480" y="98" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="28" font-weight="600">Full-Stack Developer</text>
+  <text x="480" y="132" text-anchor="middle" fill="#475569" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15">Production web applications, APIs, and backend systems</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220" role="img" aria-label="3D contribution graph placeholder">
+  <rect width="840" height="220" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="420" y="98" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18">3D contribution graph</text>
+  <text x="420" y="128" text-anchor="middle" fill="#475569" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">Generated after the profile-3d workflow runs.</text>
+</svg>

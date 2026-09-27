@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="150" viewBox="0 0 495 150" role="img" aria-label="Most used languages placeholder">
+  <rect width="495" height="150" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="247.5" y="66" text-anchor="middle" fill="#e6edf3" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16">Most used languages</text>
+  <text x="247.5" y="94" text-anchor="middle" fill="#8b949e" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Generated after the profile-stats workflow runs.</text>
+</svg>

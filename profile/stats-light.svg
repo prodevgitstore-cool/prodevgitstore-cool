@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="180" viewBox="0 0 495 180" role="img" aria-label="GitHub statistics placeholder">
+  <rect width="495" height="180" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="247.5" y="78" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="16">GitHub statistics</text>
+  <text x="247.5" y="106" text-anchor="middle" fill="#475569" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13">Generated after the profile-stats workflow runs.</text>
+</svg>

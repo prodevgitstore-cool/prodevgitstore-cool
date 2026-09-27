@@ -1,0 +1,110 @@
+# Generates GitHub statistics cards and commits the SVG files to this repo.
+#
+# Username: not hardcoded. Each card uses ${{ github.repository_owner }},
+# which is your GitHub username when this workflow lives in the profile
+# repository prodevgitstore-cool/prodevgitstore-cool.
+#
+# Files written (README.md embeds these paths — rename both together):
+#   profile/stats-light.svg
+#   profile/stats-dark.svg
+#   profile/top-langs-light.svg
+#   profile/top-langs-dark.svg
+#
+# Schedule: 17:00 UTC daily (02:00 in UTC+9). The 3D workflow runs at 18:00 UTC
+# so the two jobs are not pushing at the same minute.
+# Manual run: Actions → Profile statistics → Run workflow
+#
+# Public data only, using the built-in GITHUB_TOKEN.
+# To include private repositories:
+#   1. Create a personal access token that can read those repositories.
+#   2. Save it as a repository secret named PROFILE_STATS_TOKEN.
+#      The secret name must not start with GITHUB_.
+#   3. On each step below, comment out secrets.GITHUB_TOKEN and uncomment
+#      secrets.PROFILE_STATS_TOKEN.
+#   4. Add &count_private=true to the statistics card options only.
+
+name: Profile statistics
+
+on:
+  schedule:
+    - cron: "0 17 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: profile-statistics
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v6
+        with:
+          # Full history so a later rebase still works if the other workflow pushed.
+          fetch-depth: 0
+
+      - name: Generate statistics card (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          # hide_rank omits the letter grade. The card still shows stars,
+          # commits, pull requests, issues, and repositories contributed to.
+          # include_all_commits counts commits outside the trailing year.
+          options: "username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&include_all_commits=true&locale=en&bg_color=ffffff&border_color=e2e8f0&title_color=0f172a&text_color=334155&icon_color=0f766e"
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.PROFILE_STATS_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate statistics card (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: "username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&include_all_commits=true&locale=en&bg_color=0d1117&border_color=30363d&title_color=e6edf3&text_color=c9d1d9&icon_color=2dd4bf"
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.PROFILE_STATS_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate language card (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          # langs_count is a maximum. The card lists only languages GitHub finds.
+          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=8&locale=en&bg_color=ffffff&border_color=e2e8f0&title_color=0f172a&text_color=334155"
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.PROFILE_STATS_TOKEN }}
+          fail_on_error: true
+
+      - name: Generate language card (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: "username=${{ github.repository_owner }}&layout=compact&langs_count=8&locale=en&bg_color=0d1117&border_color=30363d&title_color=e6edf3&text_color=c9d1d9"
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # token: ${{ secrets.PROFILE_STATS_TOKEN }}
+          fail_on_error: true
+
+      - name: Commit statistics cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            profile/stats-light.svg \
+            profile/stats-dark.svg \
+            profile/top-langs-light.svg \
+            profile/top-langs-dark.svg
+          if git diff --cached --quiet; then
+            echo "No card changes to commit."
+            exit 0
+          fi
+          git commit -m "Update GitHub profile statistics"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

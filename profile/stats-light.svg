@@ -1,14 +1,14 @@
 
       <svg
-        width="372.0999999046325"
+        width="304"
         height="195"
-        viewBox="0 0 372.0999999046325 195"
+        viewBox="0 0 304 195"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">prodevgitstore-cool&#39;s GitHub Stats, Rank: C+</title>
+        <title id="titleId">J.F&#39;s GitHub Stats, Rank: C+</title>
         <desc id="descId">Total Stars Earned: 0, Total Commits  : 5686, Total PRs: 0, Total Issues: 3, Contributed to (last year): 0</desc>
         <style>
           .header {
@@ -117,7 +117,7 @@
           rx="4.5"
           height="99%"
           stroke="#e2e8f0"
-          width="371.0999999046325"
+          width="303"
           fill="#ffffff"
           stroke-opacity="1"
         />
@@ -133,7 +133,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >prodevgitstore-cool&#39;s GitHub Stats</text>
+      >J.F&#39;s GitHub Stats</text>
     </g>
       </g>
     
